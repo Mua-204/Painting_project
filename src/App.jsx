@@ -1,23 +1,25 @@
 import { useState } from 'react'
-import { BrowserRouter,Routes,Outlet,Link,Route } from "react-router-dom";
+import { BrowserRouter,Routes,Outlet,Link,Route} from "react-router-dom";
 import './App.css'
-import Header from './Title.jsx'
-import Navigation from './Nav.jsx'
-import Hero from './Hero.jsx';
+import Home from './home.jsx';
+import React from "react";
+import About from './About.jsx';
+
 
 
 function App() {
 
   return (
+        <>
     <BrowserRouter>
-    
-    <>
-      {/* <Header /> */}
-        <Navigation />
-        <Hero/>
-    </>
-    </BrowserRouter>
-  )
+      <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          </Routes>
+          
+      </BrowserRouter>
+        </>
+  );
 }
 
 export default App
