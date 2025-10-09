@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter,Routes,Outlet,Link,Route} from "react-router-dom";
 import './App.css'
-import Home from './home.jsx';
+import Home from './PAGES/HomePage.jsx';
 import React from "react";
 import About from './About.jsx';
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import Logo from "./Logo.jsx";
 import { Link } from "react-router-dom";
 import {
@@ -6,9 +6,20 @@ import {
   MdArrowDropDown,
   MdArrowDropUp,
 } from "react-icons/md";
+import {
+  FaFacebookSquare,
+  FaPinterestSquare,
+  FaTwitterSquare,
+  FaGooglePlusSquare
+} from "react-icons/fa";
+import { TfiYoutube } from "react-icons/tfi";
+import { gsap } from "gsap";
 
  const MobileMenu = ({ handleMenuVisibility, menu }) => {
-  const [openDropdown, setOpenDropdown] = useState(false);
+   const [openDropdown, setOpenDropdown] = useState(false);
+   const menuRef = useRef(null)
+   
+   
 
   const handleDropdown = (title) => {
     setOpenDropdown(openDropdown === title ? null : title);
@@ -36,17 +47,31 @@ import {
       ],
     },
     { title: "Contacts", path: "/" },
-  ];
+   ];
+   useEffect(() => {
+     if (menu) {
+       gsap.fromTo(
+         menuRef.current,
+         { x: "100%" },
+         { x: "0%", duration: 0.9, ease: "power3.out" }
+       );
+     } else {
+       gsap.to(menuRef.current, { x: "100%", duration: 0.5 });
+     }
+   }, [menu]);
 
   if (!menu) {
     return null;
   }
 
   return (
-    <div className="fixed z-50 right-0 top-0 bottom-0 bg-purple-900 w-[50%] text-white">
-      <header className=" h-31 flex flex-row w-full after-line ">
+    <div
+      ref={menuRef}
+      className="fixed z-50 right-0 top-0 bottom-0 bg-[#155DFC] w-72 text-white shadow-2xl"
+    >
+      <header className=" h-30 flex flex-row w-full after-line ">
         <div
-          className="w-70 mx-auto h-[100%] items-center flex justify-center"
+          className="w-[50%] mx-auto h-[100%] items-center flex justify-center mt-2"
           onClick={handleMenuVisibility}
         >
           <Logo />
@@ -112,8 +137,53 @@ import {
           })}
         </ul>
       </div>
+
+      {/*  */}
+      <div className="">
+        <ul className="flex gap-4 justify-center mt-13">
+          <li className="">
+            <a href="" className="">
+              <FaFacebookSquare />
+            </a>
+          </li>
+          <li className="">
+            <a href="" className="">
+              <FaTwitterSquare />
+            </a>
+          </li>
+          <li className="">
+            <a href="" className="">
+              <FaPinterestSquare />
+            </a>
+          </li>
+          <li className="">
+            <a href="" className="">
+              <FaGooglePlusSquare />
+            </a>
+          </li>
+          <li className="">
+            <a href="" className="">
+              <TfiYoutube />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
 
 export default MobileMenu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
