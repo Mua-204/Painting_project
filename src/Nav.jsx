@@ -5,7 +5,7 @@ import MobileMenu from './MobileMenu.jsx';
 // import { Link } from 'react-router-dom';
 
 const Navigation = () => {
-    const [menu, setmenu] = useState(true)
+    const [menu, setmenu] = useState(false)
   const handleMenuVisibility = () => {
         setmenu(!menu)
   }

@@ -4,6 +4,7 @@ import './App.css'
 import Home from './PAGES/HomePage.jsx';
 import React from "react";
 import About from './About.jsx';
+import AboutPage from './PAGES/AboutUsPage.jsx';
 
 
 
@@ -13,9 +14,11 @@ function App() {
         <>
     <BrowserRouter>
       <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          </Routes>
+          <Route path="/" element={<Home />}>
+          <Route path="/abou" element={<About/>}/>
+          </Route>
+        <Route path="/About" element={<AboutPage/>}/>
+        </Routes>
           
       </BrowserRouter>
         </>
