@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Logo from "./Logo.jsx";
 import { Link } from "react-router-dom";
+import navLinks from "./Links.js";
 import {
   MdCancelPresentation,
   MdArrowRight,
@@ -24,30 +25,6 @@ const MobileMenu = ({ handleMenuVisibility, menu }) => {
     setOpenDropdown(openDropdown === title ? null : title);
   };
 
-  //mobile navbar Links
-  const links = [
-    { title: "Home", path: "/" },
-    {
-      title: "About",
-      children: [
-        { label: "About Us", path: "/About" },
-        { label: "Our Work", path: "/" },
-        { label: "Our Team", path: "/" },
-        { label: "Work Details", path: "/" },
-        { label: "Faq", path: "/" },
-      ],
-    },
-    {
-      title: "Services",
-      children: [
-        { label: "View All Services", path: "/" },
-        { label: "Paint Production", path: "/" },
-        { label: "Wall Painting", path: "/" },
-        { label: "Others", path: "/" },
-      ],
-    },
-    { title: "Contacts", path: "/" },
-  ];
 
   // mobile navbar slide in menu
   useEffect(() => {
@@ -64,7 +41,7 @@ const MobileMenu = ({ handleMenuVisibility, menu }) => {
 
   // dropdown arrow rotation
    useEffect(() => {
-     links.map((items) => {
+    navLinks.map((items) => {
        const arrow = arrowRef.current[items.title];
        if (!arrow) return(null);
        if (openDropdown === items.title) {
@@ -90,8 +67,7 @@ const MobileMenu = ({ handleMenuVisibility, menu }) => {
 
   return (
     <div
-      ref={menuRef}
-      className="fixed z-50 right-0 top-0 bottom-0 bg-[#155DFC] w-72 text-white shadow-2xl overflow-y-auto"
+      ref={menuRef} className="fixed z-50 right-0 top-0 bottom-0 bg-[#155DFC] w-72 text-white shadow-2xl overflow-y-auto"
     >
       {/* Mobile navbar header and cancel/exit Button */}
       <header className=" h-30 flex flex-row w-full after-line ">
@@ -113,7 +89,7 @@ const MobileMenu = ({ handleMenuVisibility, menu }) => {
       {/* Mobile menu children/content */}
       <div className="overflow-visible">
         <ul className="h-auto ">
-          {links.map((items, idx) => {
+          {navLinks.map((items, idx) => {
             return (
               <li
                 key={items.title}
@@ -163,7 +139,7 @@ const MobileMenu = ({ handleMenuVisibility, menu }) => {
                           key={`${items.title}-child-${cIdx}`}
                           className={`${
                             cIdx !== items.children.length - 1
-                              ? "after-line pl-12 min-h-13 after-line flex flex-col justify-center text-[18px] font-medium text-shadow-amber-50 hover:text-[#38048b] transition-hover duration-400 cursor-pointer"
+                              ? " pl-12 min-h-13 after-line flex flex-col justify-center text-[18px] font-medium text-shadow-amber-50 hover:text-[#38048b] transition-hover duration-400 cursor-pointer"
                               : "pl-12 min-h-13 flex flex-col justify-center text-[18px] font-medium text-shadow-amber-50 hover:text-[#38048b] transition-hover duration-400 cursor-pointer"
                           }`}
                         >
