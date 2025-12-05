@@ -13,7 +13,8 @@ const Hero = ({ children, variant }) => {
   return (
     <>
         {" "}
-    <div className={`${variants[variant]}`}> {children} </div></>
+      <div className={`${variants[variant]}`}> {children} </div>
+    </>
   );
 }
 

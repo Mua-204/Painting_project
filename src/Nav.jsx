@@ -12,7 +12,7 @@ const Navigation = () => {
   };
   return (
     <>
-      <div className="flex  h-26 lg:h-[80px] bg-amber-40 items-center xl:h-17">
+      <div className="flex  h-26 lg:h-[80px] items-center xl:h-17">
         <IoIosMenu
           className="bg-[#440472] text-5xl md:text-6xl font-extrabold text-white mr-auto ml-4 lg:hidden"
           onClick={handleMenuVisibility}

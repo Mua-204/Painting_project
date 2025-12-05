@@ -15,6 +15,7 @@ import {
 import { TfiYoutube } from "react-icons/tfi";
 import { gsap } from "gsap";
 
+
 const MobileMenu = ({ handleMenuVisibility, menu }) => {
   // React Hooks
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -101,7 +102,7 @@ const MobileMenu = ({ handleMenuVisibility, menu }) => {
                     onClick={handleMenuVisibility}
                     className="pl-4 hover:text-[#38048b] transition-hover duration-400 cursor-pointer w-[100%]"
                   >
-                    {" "}
+                    
                     {items.title}
                   </Link>
                 ) : (
@@ -112,7 +113,7 @@ const MobileMenu = ({ handleMenuVisibility, menu }) => {
                       }`}
                     >
                       <span className="mr-auto w-[100%] hover:text-[#38048b] transition-hover duration-400 cursor-pointer">
-                        {" "}
+                        
                         {items.title}
                       </span>
                       {
@@ -132,7 +133,7 @@ const MobileMenu = ({ handleMenuVisibility, menu }) => {
                       openDropdown === items.title ? "flex flex-col" : " hidden"
                     }`}
                   >
-                    {items.children.map((childitem, cIdx) => {
+                    {items.children.map((childitem, cIdx) => {                    
                       return (
                         <li
                           //   remember to put back the path as the first option for the key below (childitem.path ??)

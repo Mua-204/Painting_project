@@ -28,7 +28,6 @@ const Desktop = () => {
                 {items.title}
               </span>
             )}
-            {/* absolute left-0 top-full mt-3 bg-white shadow-lg rounded-lg w-48 py-2 z-50 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200" */}
 
             {items.children && (
               <div className="absolute opacity-0 invisible left-[-100%] top-full group-hover:visible group-hover:opacity-100 bg-white shadow-lg rounded-lg w-60 pb-1 pt-1.5 z-50 mt-6 transition-all duration-200">
@@ -43,14 +42,12 @@ const Desktop = () => {
                             : "pb-0.5 mb-0.5"
                         }`}
                       >
-                        {/* block px-4 py-2 text-gray-700 hover:bg-purple-100 hover:text-purple-700" */}
                         <Link
                           to={child.path}
                           className=" text-[15px] font-medium flex items-center h-8 pl-3.5 py-1 text-gray-900 hover:border-l-7 transition-all ease-in duration-150 hover:text-[#e910de]"
                         >
                           {child.label}
                         </Link>
-                        {/* {console.log(child.label)} */}
                       </li>
                     );
                   })}
@@ -90,56 +87,3 @@ const Desktop = () => {
 }
 
 export default Desktop
-
-// import React, { useState } from "react";
-// import navLinks from "./Links.js";
-// import { Link } from "react-router-dom";
-
-// const Desktop = () => {
-//   return (
-//     <nav className="bg-white mr-auto ml-22">
-//       <ul className="hidden lg:flex gap-9 items-center justify-center mr-auto">
-//         {navLinks.map((item) => (
-//           <li
-//             key={item.path ? item.path : item.title}
-//             className="relative group"
-//           >
-//             {/* Main link / label */}
-//             {item.path ? (
-//               <Link
-//                 to={item.path}
-//                 className="text-gray-800 font-semibold hover:text-purple-600 transition"
-//               >
-//                 {item.title}
-//               </Link>
-//             ) : (
-//               <span className="cursor-pointer text-gray-800 font-semibold hover:text-purple-600 transition">
-//                 {item.title}
-//               </span>
-//             )}
-
-//             {/* Dropdown */}
-//             {item.children && (
-//               <div className="absolute left-0 top-full mt-3 bg-white shadow-lg rounded-lg w-48 py-2 z-50 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200">
-//                 <ul>
-//                   {item.children.map((child) => (
-//                     <li key={child.label}>
-//                       <Link
-//                         to={child.path}
-//                         className="block px-4 py-2 text-gray-700 hover:bg-purple-100 hover:text-purple-700"
-//                       >
-//                         {child.label}
-//                       </Link>
-//                     </li>
-//                   ))}
-//                 </ul>
-//               </div>
-//             )}
-//           </li>
-//         ))}
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// export default Desktop;
