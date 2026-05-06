@@ -17,7 +17,7 @@ const Button = ({ children, variant, className, ...props }) => {
     quality:
       "w-full h-full transition overflow-hidden text-[#4f4b46] inline-flex items-center justify-center",
     default:
-      " min-w-64 h-[50px] mr-3 text-white md:mr-6 lg:mr:8 bg-gray-800 hover:bg-gray-900",
+      " min-w-64 h-[50px] mr-3 text-white md:mr-6 lg:mr:8 bg-gray-700 hover:bg-gray-900",
   };
   return (
     <button

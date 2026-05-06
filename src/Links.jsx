@@ -6,8 +6,10 @@ import {
   GrFacebookOption,
   GrTwitter,
 } from "react-icons/gr";
+import { FaArrowDown } from "react-icons/fa";
 import { HiOutlineArrowDown } from "react-icons/hi";
 const QualityArray = [
+  // QUALITY MATERIAL SECTION
   {
     title: "Quality Material",
     Children: [
@@ -29,6 +31,7 @@ const QualityArray = [
       },
     ],
   },
+  // EXPERT TEAM SECTION
   {
     title: "Expert Team",
     Children: [
@@ -127,6 +130,8 @@ const QualityArray = [
     ],
   },
 
+  // SMART WORK SECTION
+
   {
     title: "Smart Work",
     Children: [
@@ -142,18 +147,17 @@ const QualityArray = [
 
               {/* Overlay*/}
 
-              <div className="absolute bg-gradient-to-b from-[#4A2196]/50 to-[#4A2196]/90 z-10 bottom-0 w-full h-60 md:h-50  flex flex-col justify-center items-center scale-0 translate-y-[100%] group-hover:translate-y-[0%]  group-hover:scale-100 transition-transform duration-1000 ">
-                <h2 className="flex flex-col justify-center text-white cursor-pointer hover:text-[#aeadb9] text-3xl font-bold font-serif gap-y- mb-5">
-                  <span>Washroom</span>
-                  <span>Wall Design</span>
-                </h2>
+              <div className="absolute w-full md:h-50 inset-x-0 bottom-0 h-[60%] bg-[#4B0E9D]/80 [mask-image:linear-gradient(to_bottom,transparent_10%,black,black)] z-10 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-2000 ease-in-out scale-0 group-hover:scale-100 " />
+              <div className="absolute inset-x-0 h-40 z-20 flex flex-col justify-center items-center text-white gap- translate-y-50 group-hover:translate-y-0 group-hover:rotate-x-[0] rotate-x-180  bottom-0  transition-all duration-3000 ease-in-out bg-transparent">
+                <h2 className="text-2xl font-bold">Washroom</h2>
+                <h3 className="text-xl">Wall Design</h3>
 
                 {/* button */}
 
-                <div className="absolute bottom-0 bg-white w-25 text-center h-25 rounded-t-full pt-4 translate-y-[40%]">
-                  <button className="text-3xl">
-                    <HiOutlineArrowDown />
-                  </button>
+                <div className="flex  bg-white rounded-x-full h-17 w-25 justify-center items-center rounded-t-full rounded-l-full rounded-r-full relative top-5 rounded-b-none">
+                  <Link to={"/"}>
+                    <FaArrowDown className="text-3xl text-gray-800" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -169,18 +173,17 @@ const QualityArray = [
 
               {/* Overlay*/}
 
-              <div className="absolute bg-gradient-to-b from-[#4A2196]/50 to-[#4A2196]/90 z-10 bottom-0 w-full h-60 md:h-50  flex flex-col justify-center items-center scale-0 translate-y-[100%] group-hover:translate-y-[0%]  group-hover:scale-100 transition-transform duration-1000 ">
-                <h2 className="flex flex-col justify-center text-white cursor-pointer hover:text-[#aeadb9] text-3xl font-bold font-serif gap-y- mb-5">
-                  <span>Washroom</span>
-                  <span>Wall Design</span>
-                </h2>
+              <div className="absolute w-full md:h-50 inset-x-0 bottom-0 h-[60%] bg-[#4B0E9D]/80 [mask-image:linear-gradient(to_bottom,transparent_10%,black,black)] z-10 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-2000 ease-in-out scale-0 group-hover:scale-100 " />
+              <div className="absolute inset-x-0 h-40 z-20 flex flex-col justify-center items-center text-white gap- translate-y-50 group-hover:translate-y-0 group-hover:rotate-x-[0] rotate-x-180  bottom-0  transition-all duration-3000 ease-in-out bg-transparent">
+                <h2 className="text-2xl font-bold">Washroom</h2>
+                <h3 className="text-xl">Wall Design</h3>
 
                 {/* button */}
 
-                <div className="absolute bottom-0 bg-white w-25 text-center h-25 rounded-t-full pt-4 translate-y-[40%]">
-                  <button className="text-3xl">
-                    <HiOutlineArrowDown />
-                  </button>
+                <div className="flex  bg-white rounded-x-full h-17 w-25 justify-center items-center rounded-t-full rounded-l-full rounded-r-full relative top-5 rounded-b-none">
+                  <Link to={"/"}>
+                    <FaArrowDown className="text-3xl text-gray-800" />
+                  </Link>
                 </div>
               </div>
             </div>

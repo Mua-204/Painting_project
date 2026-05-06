@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import Header from "../Title.jsx";
 import Navigation from "../Nav.jsx";
 import Hero from "../Hero.jsx";
-import Button from "../Button";
+import Button from "../Button.jsx";
 import About from "../About.jsx";
 import { FaCheck } from "react-icons/fa6";
 import aboutImage1 from "../assets/aboutImage5.png";
 import sticker1 from "../assets/sticker3.png";
 import Feature1 from "../assets/Copied1.jpg";
 import Feature2 from "../assets/Copied3.jpg";
+import { recentProjects } from "../ArrayItems.js";
+import { FaArrowDown } from "react-icons/fa";
+import OurServices from "../OurServices.jsx";
 import { Route, Routes, Outlet, Link } from "react-router-dom";
 
 // import Button from "./Button";
@@ -201,7 +204,7 @@ const Home = () => {
         className="lg:w-full relative bg-[url(./assets/introImage3.jpg)] bg-cover xl:bg-center bg-no-repeat bg-fixed"
       >
         {/* overlay */}
-        <div className=" bg-[#2A2721]/89 absolute w-full h-full z-20"></div>
+        <div className=" bg-[#2A2721]/89 absolute w-full h-full z-20" />
 
         {/* main */}
         <main className="text-[#8D8980] z-30 pt-31 relative mx-5 xs:mx-8 sm:mx-15 md:mx-18 xmd:mx-23 lg:mx-25 xlg:mx-16 grid grid-cols-1 xlg:grid-cols-[minmax(450px,auto)_minmax(400px,500px)] xlg:gap-10 xl:mx-12 xl:gap-15">
@@ -295,6 +298,80 @@ const Home = () => {
       </section>
 
       {/*End Interior Design Area */}
+
+      {/*our recent project begins*/}
+      <section className="">
+        <h1 className="bg-purple-800 h-40 w-[97.5%] mb-1 text-white text-5xl text-center content-center font-extrabold">
+          Our Recent Project
+        </h1>
+        <main className="grid xs:grid-cols-1 vlg:grid-rows-1 2-full vlg:grid-cols-5 justify-items-center-safe gap-8 px-10 mt-30 mb-25">
+          {recentProjects.map((item, index) => (
+            <div
+              className="group overflow-hidden relative rounded-lg w-full max-w-[470px] max-h-[524.83px]"
+              key={index}
+            >
+              <img
+                src={item.img}
+                className="relative w-full z-10 h-full "
+                alt=""
+              />
+              {/* the overlay */}
+              <div className="absolute inset-x-0 bottom-0 h-[60%] bg-[#4B0E9D]/80 [mask-image:linear-gradient(to_bottom,transparent_0%,black,black)] z-10 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-1000 ease-in-out scale-0 group-hover:scale-100" />
+              {/* the texts within the overlay */}
+              <div className="absolute inset-x-0 h-40 z-20 flex flex-col justify-center items-center text-white gap- translate-y-50 group-hover:translate-y-0 group-hover:rotate-x-[0] rotate-x-180  bottom-0  transition-all duration-2500 ease-in-out bg-transparent">
+                <h2 className="text-2xl font-bold">{item.title}</h2>
+                <h3 className="text-xl">{item.subtitle}</h3>
+                <div className="flex  bg-white rounded-x-full h-17 w-25 justify-center items-center rounded-t-full rounded-l-full rounded-r-full relative top-5 rounded-b-none">
+                  <Link to={item.link}>
+                    <FaArrowDown className="text-3xl text-gray-800" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </main>
+      </section>
+      {/*Our recent project ends*/}
+
+      {/*Our Services List begins*/}
+      <section className="w-full min-h-lvh after-line2">
+        <div
+          id="section header"
+          className="bg-[#F6F2EB] w-full h-90 lg:h-75 justify-items-center content-center relative  "
+        >
+          <h3 className="underline underline-offset-6 text-[20px] font-medium text-gray-500 decoration-[#8635f0] mb-5">
+            Our Services List
+          </h3>
+          <h1 className="text-[#1608DB] text-4xl font-extrabold lg:text-5xl ]">
+            Services We're Providing
+          </h1>
+        </div>
+
+        {/* the main displays */}
+
+        <main className=" grid gap-y-17 grid-cols-1 lg:grid-cols-3 bg-amber- gap-x-8 w-[90%] justify-self-center p-1 pb-18">
+          <OurServices
+            img="src/assets/service-v1-1.jpg"
+            comment="There are not many of passages of Lorem ipsum dolor alteration in some form"
+            link="/"
+            title="Room Wallpaper"
+          />
+          <OurServices
+            img="src/assets/service-v1-2.jpg"
+            comment="There are not many of passages of Lorem ipsum dolor alteration in some form"
+            link="/"
+            title="Wall Painting"
+          />
+          <OurServices
+            img="src/assets/service-v1-3.jpg"
+            comment="There are not many of passages of Lorem ipsum dolor alteration in some form"
+            link="/"
+            title="Wall Sheets"
+          />
+        </main>
+      </section>
+
+      {/*Our Services List ends*/}
       <About />
     </>
   );
