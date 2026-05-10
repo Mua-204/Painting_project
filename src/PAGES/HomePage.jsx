@@ -342,7 +342,7 @@ const Home = () => {
           <h3 className="underline underline-offset-6 text-[20px] font-medium text-gray-500 decoration-[#8635f0] mb-5">
             Our Services List
           </h3>
-          <h1 className="text-[#1608DB] text-4xl font-extrabold lg:text-5xl ]">
+          <h1 className="text-[#1608DB] text-[30px] sm:text-5xl font-extrabold lg:text-5xl ]">
             Services We're Providing
           </h1>
         </div>
