@@ -69,9 +69,9 @@ const About = () => {
         {/* overlay */}
         <div className="absolute bg-[url(src/assets/testimonial-style1-pattern.png)] w-full h-full object-cover bg-no-repeat opacity-28" />
 
-        <section className="relative text-white  pt-15 px-5 sm:pt-25 sm:px-25 md:px-10 xmd:mx-20 lg:mx-15 xlg:mx-17 vlg:grid vlg:grid-cols-2 gap-x-10 vlg:mx-0">
+        <section className="relative text-white  pt-15 px-5 sm:pt-25 sm:px-25 md:px-10 xmd:mx-20 lg:mx-15 xlg:mx-17 vlg:grid vlg:grid-cols-2 gap-x-10 vlg:mx-0 vlg:pt-0">
           {/* the main */}
-          <main className="overflow-clip mb-15 vlg:mb-0 bg-green-600">
+          <main className="overflow-hidden mb-15 vlg:mb-0 vlg:pl-11 vlg:pt-28">
             <div className="mb-12">
               <h2 className="underline underline-offset-5 font-medium decoration-3 decoration-[#a175db] text-[#f1ecec] text-[20px] ">
                 Client Testimonials
@@ -87,7 +87,7 @@ const About = () => {
                 {Testimonies.map((items, idx) => {
                   return (
                     <div key={idx} className=" px-2 py-1 ">
-                      <p className="text-[#b1b0ae] text-[20px] font-medium lg:w-[95%] xlg:w-[80%]">
+                      <p className="text-[#b1b0ae] text-[20px] font-medium lg:w-[95%] xlg:w-[80%] vlg:text-[20px]/9">
                         {items.parag}
                       </p>
                       <div className="mt-9  flex gap-x-5">
@@ -112,7 +112,7 @@ const About = () => {
             </section>
           </main>
 
-          <aside className=" p-2 vlg:p-0 min-h-[281px] flex  ">
+          <aside className=" p-2 vlg:p-0 min-h-[281px] flex">
             <div className="max-w-[98px] md:max-w-[105px] justify-items-center content-center justify-center bg-[#9e6dbe] relative overflow ">
               <p className=" text-[22px] md:text-[30px] font-semibold md:font-bold break-words rotate-90 text-nowrap">
                 Customer Feedbacks
@@ -134,4 +134,3 @@ const About = () => {
 
 export default About;
 
-// IF ANYTHING SCATTERS JUST COPY THIS BACK HERE
