@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import Header from "../Title.jsx";
-import Navigation from "../Nav.jsx";
-import Hero from "../Hero.jsx";
 import Button from "../Button.jsx";
 import About from "../About.jsx";
 import { FaCheck } from "react-icons/fa6";
@@ -21,9 +18,7 @@ const Home = () => {
   const [activeIndex, setActiveIndex] = useState(QualityArray[0].title);
   return (
     <>
-      <Header />
-      <Navigation />
-      <Hero variant="home">
+      <div className='bg-[url("./assets/heroImage5.jpg")] bg-center bg-cover bg-amber-60 w-full min-h-123 md:min-h-170 lg:min-h-[100vh] bg-no-repeat text-white pl-10 md:pl-24 lg:pl-27 xl:pl-32 flex flex-col justify-center'>
         <p className="text-blue-700 font-bold text-[20px] md:text-2xl xl:text-3xl xl:font-extrabold ">
           Welcome to interior wall painting
         </p>
@@ -36,7 +31,7 @@ const Home = () => {
           <Button variant="herobutton">Discover More</Button>
         </div>
         <button></button>
-      </Hero>
+      </div>
 
       {/*Start About Style1 Area*/}
       <section className="mt-27 mb-8 lg:bg-pink-4 lg:grid lg:grid-cols-2 lg:mr-15 lg:gap-15 xs:bg-amber-5 xs:">

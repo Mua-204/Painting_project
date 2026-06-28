@@ -7,8 +7,8 @@ import React from 'react'
       title: "About",
       children: [
         { label: "About Us", path: "/About" },
-        { label: "Our Work", path: "/" },
-        { label: "Our Team", path: "/" },
+        { label: "Our Work", path: "/Our_Work" },
+        { label: "Our Team", path: "/Our_Team" },
         { label: "Work Details", path: "/" },
         { label: "Faq", path: "/" },
       ],
@@ -22,7 +22,7 @@ import React from 'react'
         { label: "Others", path: "/" },
       ],
     },
-    { title: "Contacts", path: "/" },
+    { title: "Contacts", path: "/Contact-Us" },
   ];
 export default navLinks;
 
